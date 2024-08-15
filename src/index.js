@@ -10,12 +10,19 @@ export function reverseString(str) {
   return str;
 };
 
-export function caesarCipher(str) {
+export function caesarCipher(str, shiftFactor) {
 
 };
 
 export function analyzeArray(arr) {
-
+  arr = arr.sort()
+  let object = {
+    length: arr.length,
+    average: arr.reduce((prev, cur) => prev + cur, 0) / arr.length,
+    min: arr.shift(),
+    max: arr.pop()
+  };
+  return object;
 };
 
 export const calculator = (function() {
