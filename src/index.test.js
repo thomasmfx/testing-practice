@@ -40,3 +40,20 @@ test('Returns correctly max value from array', () => {
 test('Returns correctly length of array', () => {
   expect(analyzeArray([1,8,3,4,2,6]).length).toEqual(6)
 })
+
+// calculator
+test('Sums two numbers', () => {
+  expect(calculator.add(5, 10)).toEqual(15);
+});
+
+test('Subtract two numbers', () => {
+  expect(calculator.subtract(18, 6)).toEqual(12);
+});
+
+test('Multiply two numbers', () => {
+  expect(calculator.multiply(7, 7)).toEqual(49);
+});
+
+test('Divide two numbers', () => {
+  expect(calculator.divide(21, 3)).toEqual(7);
+});
