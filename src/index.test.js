@@ -24,6 +24,19 @@ test('Returns a reversed string without whitespaces on both ends', () => {
   expect(reverseString('   I like churros')).toBe('sorruhc ekil I')
 })
 
+// caesarCipher
+test("Caesar cipher: returns correct encryption", () => {
+  expect(caesarCipher('xyz', 3)).toBe('abc');
+});
+
+test("Caesar cipher: follows original lettercase", () => {
+  expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
+});
+
+test("Caesar cipher: respects punctuation", () => {
+  expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+});
+
 //analyzeArray
 test('Returns correctly average value from array', () => {
   expect(analyzeArray([1,8,3,4,2,6]).average).toEqual(4)
