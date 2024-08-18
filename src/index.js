@@ -4,14 +4,11 @@ export function capitalize(str) {
 };
 
 export function reverseString(str) {
-  let strArray = Array.from(str.trim()).reverse();
-  str = '';
-  for (const char of strArray) str += char;
-  return str;
+  return str.trim().split('').reverse().join('');
 };
 
 export function analyzeArray(arr) {
-  arr = arr.sort()
+  arr = arr.sort();
   let object = {
     length: arr.length,
     average: arr.reduce((prev, cur) => prev + cur, 0) / arr.length,
@@ -60,11 +57,11 @@ export function caesarCipher(str, factor) {
         isUpperCase(letter)
         ? encrypted += `${cipherAlphabet[i].toUpperCase()}`
         : encrypted += `${cipherAlphabet[i]}`
-      }
+      };
     };
   };
 
-  return encrypted
+  return encrypted;
 };
 
 function newAlphabet() {
